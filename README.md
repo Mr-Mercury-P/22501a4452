@@ -1,11 +1,3 @@
-# urlController.js
-
-This file contains the controller logic for the URL Shortener microservice.
-
-## Functions
-
-### createShortUrl
-
 - **Purpose:**  
   Creates a new shortened URL with a specified or default validity period.
 
@@ -46,23 +38,23 @@ This file contains the controller logic for the URL Shortener microservice.
 
 ### Shorten a URL
 
-**POST** `/shorten`
+**POST** `http://localhost:4000/shorturls`
 ```json
 {
-  "originalUrl": "https://www.example.com",
+  "originalUrl": "https://www.amazon.com/",
   "validityMinutes": 45
 }
 ```
 
 ### Retrieve Original URL
 
-**GET** `/:shorturl`
+**GET** `[/:shorturl](http://localhost:4000/shorturls/JSTNjfIXf)`
 
 **Response:**
 ```json
 {
-  "originalUrl": "https://www.example.com",
-  "expiresAt": "2024-06-28T12:34:56.789Z"
+    "originalUrl": "https://www.amazon.com/",
+    "expiresAt": "2025-06-28T06:42:33.731Z"
 }
 ```
 ![alt text](image.png)
